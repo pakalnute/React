@@ -1,43 +1,16 @@
-//import './App.css';
-
-import Box from './Components/Box';
-// import Simple from './Components/Simple';
-
-// const a = 5;
-// const b = 6;
-
-const data = [
-  {
-    ls: '2px',
-    boxColor: 'green',
-    boxNumber: 68
-  },
-    {
-    ls: '1px',
-    boxColor: 'yellow',
-    boxNumber: 45
-  },
-    {
-    ls: '-2px',
-    boxColor: 'white',
-    boxNumber: 90
-  },
-    {
-    ls: '4px',
-    boxColor: 'pink',
-    boxNumber: 101
-  }
-];
-
+import BlueSquare from "./components/BlueSquare";
+import RedCircle from "./components/RedCircle";
 
 function App() {
 
-  return (
-    <>
-    {data.map((box, index) => <Box key={index} boxColor={box.boxColor} ls={box.ls} boxNumber={box.boxNumber} />)}
-    </>
-  );
-
+    return (
+        <div>
+            <BlueSquare buttonText={'S P A U S T I'}/>
+            <BlueSquare buttonText={'S T U M T I'}/>
+            <RedCircle color={'red'} buttonText={'S P A U S T I'}/>
+            <RedCircle color={'yellow'} buttonText={'K E L T I'}/>
+        </div>
+    );
 }
 
 export default App;
