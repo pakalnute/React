@@ -1,53 +1,20 @@
 @import "./App.scss";
 
 body {
-    margin-top: 0;
+    background-color: aliceblue;
+    margin-top: 50px;
+
+    div {
+        float: left;
+    }
+}
+
+body {
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-  //height: 100vh;
-  //flex-direction: column-reverse;
+    height: 100vh;
+    background-color: rgb(245, 242, 248);
 }
 
-.blue-square {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: blue;
-  width: 200px;
-  height: 200px;
-  margin: 20px;
-
-}
-
-.red-circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: red;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  margin: 20px;
-}
-
-
-// .circle {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   width: 200px;
-//   height: 200px;
-//   border-radius: 50%;
-//   margin: 20px;
-// }
-
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  margin: 20px;
-}
