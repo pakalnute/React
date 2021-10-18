@@ -1,5 +1,6 @@
 import { Component } from 'react';
-import "../App.scss";
+
+
 
 class Balloons extends Component  {
     
