@@ -1,3 +1,8 @@
+# Uzduotys
+1. Sukurti reacto aplikaciją kuri nupaišytų aštuonis skirtingų spalvų apskritimus, duomenis imant iš masyvo su aštuoniais hex spalvų kodais.
+2. Reikia sukurti 10 įvairių random spalvų apskritimus. Tada paspaudus pelike ant to apskritimo jis turi pradingti. Viršuje turi būti skaitiklis, kuris skaičiuotų susprogdintus balionus (apskritimus). Pradžioje jis turi rodyti 0
+3.Reikia padaryti du apskritimus su skaičiais viduryje. Ir du mygtukus po tais skaičiais-apskritimais. Paspaudus pirmą mygtuką, pirmame rutulyje skaičius padidėja 1. Paspaudus antrą mygtuką, skaičius jo apskritime padidėja tokiu skaičiumi, koks tuo metu yra pirmame. Dar tegul bus trečias mygtukas kur skaičius abiejuose apskritimuose nunulina.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
