@@ -1,21 +1,78 @@
-@import "./App.scss";
-
-body {
-    background-color: aliceblue;
-    margin-top: 50px;
-
-    div {
-        float: left;
-    }
-}
-
+@import 'App.scss';
 body {
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: rgb(245, 242, 248);
+    width: 100vw;
+    // flex-direction: column-reverse;
+}
+
+.blue-square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+}
+
+.red-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+h1 {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+.cow-field {
+    background-color: aquamarine;
+    width: 500px;
+    height: 300px;
+    border: 4px dashed darkturquoise;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .counter {
+        position: absolute;
+        top: 0;
+        left: 5px;
+        margin: 10px;
+        font-size: 60px;
+        font-weight: bold;
+    }
+}
+
+@keyframes short-press {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.hide {
+    display: none;
 }
 
 button {
@@ -29,12 +86,13 @@ button {
     width: 120px;
     line-height: 38px;
     overflow: hidden;
-    background: #cf4d99;
+    background: #4dbecf;
     border-radius: 3px;
     box-shadow: 0 15px 30px rgba(black, .1);
     border: 0;
     cursor: pointer;
     transition: all .3s ease;
+    margin: 7px;
     &:hover,
     &:focus {
         box-shadow: 0 5px 15px rgba(black, .1);
@@ -63,7 +121,7 @@ button {
     }
 }
 
-.circle1 {
+.circler {
     display: flex;
     justify-content: center;
     align-items: center;
