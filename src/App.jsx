@@ -1,20 +1,17 @@
-import { useState } from "react";
-import ButtonColorChanger from "./components/ButtonColorChanger";
-
+import CheckBoxInput from "./components/CheckBoxInput";
+import SelectInput from "./components/SelectInput";
+import TextInput from "./components/TextInput";
 
 function App() {
 
-    const [bg, setBg] = useState('black');
-
-    const changeBg = color => {
-        setBg(color)
-    }
 
 
     return (
-        <div className="sq" style={{backgroundColor:bg}}>
-            <ButtonColorChanger kasNors={changeBg}></ButtonColorChanger>
-        </div>
+        <>
+            <TextInput></TextInput>
+            <SelectInput></SelectInput>
+            <CheckBoxInput></CheckBoxInput>
+        </>
     )
 }
 
