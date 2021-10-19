@@ -1,12 +1,21 @@
-import Circle1 from './components/Circle1';
+import { useState } from "react";
+import ButtonColorChanger from "./components/ButtonColorChanger";
 
 
 function App() {
-  return (
-    <>
-      <Circle1/>
-    </>
-  );
+
+    const [bg, setBg] = useState('black');
+
+    const changeBg = color => {
+        setBg(color)
+    }
+
+
+    return (
+        <div className="sq" style={{backgroundColor:bg}}>
+            <ButtonColorChanger kasNors={changeBg}></ButtonColorChanger>
+        </div>
+    )
 }
 
 export default App;
