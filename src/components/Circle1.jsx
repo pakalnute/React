@@ -1,35 +1,38 @@
 import { useState } from "react";
 
-function Circle1({buttonText, circleColor}) {
+function Circle1(props) {
 
     const [counter1, setCounter1] = useState(0);
     const [counter2, setCounter2] = useState(0);
 
-    const increaseCounter = (which) => {
-        if (which === 0) {
-            setCounter1(0);
-            setCounter2(0);
-        } else {
-            which === 1 ? setCounter1(counter1 + 1) : setCounter2(counter1 + counter2);
-        }
+    const addOne = () => {
+        setCounter1(counter1 + 1);
+    }
+
+    const addMany = () => {
+        setCounter2(counter2 + counter1);
+    }
+
+    const set0 = () => {
+        setCounter1(0);
+        setCounter2(0);
     }
 
     return (
         <div className="content">
-            <div className="circle1" style={{
-                background: 'yellow',
-            }}>
-                <p>{counter1}</p>
+            <div className="circle1" style={{background: 'yellow',}}>
+                <span>{counter1}</span>
+                <button onClick={addOne}>Padidinti 1</button>
+                
             </div>
-            <button onClick={() => increaseCounter(1)}>Padidinti 1</button>
+            
 
-            <div className="circle1" style={{
-                background: 'yellow',
-            }}>
-                <p>{counter2}</p>
+            <div className="circle1" style={{background: 'green',}}>
+                    <span>{counter2}</span>
+                <button onClick={addMany}>Pridėti iš 1</button>
+                
             </div>
-            <button onClick={() => increaseCounter(2)}>Pridėti iš 1-o</button>
-            <button onClick={() => increaseCounter(0)}>Reset All</button>
+            <button onClick={set0}>Reset All</button>
 
         </div>
     )
