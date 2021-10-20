@@ -6,7 +6,9 @@
 
 3.Reikia padaryti du apskritimus su skaičiais viduryje. Ir du mygtukus po tais skaičiais-apskritimais. Paspaudus pirmą mygtuką, pirmame rutulyje skaičius padidėja 1. Paspaudus antrą mygtuką, skaičius jo apskritime padidėja tokiu skaičiumi, koks tuo metu yra pirmame. Dar tegul bus trečias mygtukas kur skaičius abiejuose apskritimuose nunulina.
 
-4. Reikia padaryti du text inputus (vienas gali būti color), vieną selektą ir mygtuka. Į vieną text inputą rašoma spalva, o į kitą skaičius, selekte pasirenkama forma (circle, square, vertical line, horizontal line) o paspaudus mygtuką pasirodo tokios spalvos ir formos figūros. Figūrų kiekis priklauso nuo skaičiaus inputo
+4. Reikia padaryti du text inputus (vienas gali būti color), vieną selektą ir mygtuka. Į vieną text inputą rašoma spalva, o į kitą skaičius, selekte pasirenkama forma (circle, square, vertical line, horizontal line) o paspaudus mygtuką pasirodo tokios spalvos ir formos figūros. Figūrų kiekis priklauso nuo skaičiaus inputo.
+
+5. Prie karvių ir avių uždavinio pridėkite arklius ir padarykite selektą su dviejų laukų pasirinkimu. Gyvulius reikia pridėti atskirai į pasirinktą lauką.
 
 # Getting Started with Create React App
 
