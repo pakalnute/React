@@ -14,9 +14,9 @@
 
 }
 .button {
-  float: left;
+ // float: left;
   margin: 20px;
-  background-color: chartreuse;
+ // background-color: chartreuse;
   padding: 7px 20px;
 }
 
@@ -32,7 +32,7 @@
 .balloons:hover {
   cursor: pointer;
 }
-.text {
+.text-design {
   text-align: center;
   display: inline-block;
   padding: 0 20px;
@@ -46,6 +46,29 @@
   left: 50%;
   transform: translate(-50%);
   background-color: #fff;
+}
+
+.balloons {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  background-color: #fff59b;
+  margin: 20px;
+  position: relative;
+  align-items: center;
+
+  .text-design{
+    text-align: center;
+    width: 200px;
+    height: 30px;
+    padding: 0 20px;
+    line-height: 30px;
+    margin-left: 50px;
+    margin-top: 40px;
+    color:rgb(185, 22, 22);
+    font-size: large;
+  }
 }
 .content {
   display: inline-block;
@@ -63,9 +86,42 @@
   align-items: center;
 }
 
-button {
+.button {
   .hide {
     display: none;
   }
 }
 
+.field, 
+.farm {
+  width: 100%;
+  box-sizing: border-box;
+  div {
+      background-color: lightgreen;
+      margin: 20px 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      .cow {
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          border: 4px dotted deeppink;
+          margin: 10px;
+      }
+      .sheep {
+          height: 50px;
+          width: 50px;
+          border: 4px dotted darkturquoise;
+          margin: 10px;
+      }
+      .horse {
+          transform: rotate(65deg);
+          background-color: yellow;
+          margin: 10px;
+          width: 50px;
+          height: 50px;
+      }
+  }
+}

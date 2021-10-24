@@ -1,3 +1,4 @@
+
 function FieldAnimal({ fieldAnimal }) {
 
     if ('cow' === fieldAnimal.animal) {

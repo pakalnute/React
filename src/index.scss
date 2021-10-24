@@ -191,65 +191,6 @@ button {
     }
 }
 
-.field {
-    width: 100%;
-    box-sizing: border-box;
-    div {
-        background-color: lightgreen;
-        margin: 20px 0;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        .cow {
-            height: 50px;
-            width: 50px;
-            border-radius: 50%;
-            border: 4px dotted deeppink;
-            margin: 10px;
-        }
-        .sheep {
-            height: 50px;
-            width: 50px;
-            border: 4px dotted darkturquoise;
-            margin: 10px;
-        }
-        .horse {
-            transform: rotate(65deg);
-            background-color: yellow;
-            margin: 10px;
-            width: 50px;
-            height: 50px;
-        }
-    }
-}
-.content {
-    display: inline-block;
-    text-align: center;
-    width: 100vw;
-}
-.left-field {
-    float: left;
-    overflow-y: scroll;
-    width: 300px;
-    height: calc(100vh - 110px);
-    background-color: darkseagreen;
-}
-.right-field {
-    float: right;
-    overflow-y: scroll;
-    width: 300px;
-    height: calc(100vh - 110px);
-    background-color: darkseagreen;
-}
-
-.navigation {
-    display: inline-block;
-    text-align: center;
-    height: 95px;
-    width: 100%;
-    box-sizing: border-box;
-}
 
 button {
     padding: 4px 15px;
