@@ -8,7 +8,7 @@ function App() {
 
     const add = (what) => {
         const fieldCopy = field.slice();
-        fieldCopy.push({animal:what, field:fieldNamber});
+        fieldCopy.push({animal:what, field:parsenInt(fieldNamber)});
         setField(fieldCopy);
         console.log(fieldCopy);
     };
