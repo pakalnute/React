@@ -1,61 +1,68 @@
-import { useState } from 'react';
-import FieldAnimal from "./components/FieldAnimal";
+import { useState } from "react";
+import GroupAnimal from "./components/GroupAnimal";
 
 function App() {
+    // PIRMAS LAUKAS
+    const [fieldFirst, setFieldFirst] = useState([]);
 
-    const [field, setField] = useState([])
-    const [farm, setFarm] = useState([])
+    // ANTRAS LAUKAS
+    const [fieldSecond, setFieldSecond] = useState([]);
 
-    const [change, setChange] = useState([]);
+    // LAUKO PASIRINKIMAS
+    const [change, setChange] = useState("first");
 
 
-
+    // SALYGA
     const add = (what) => {
-        const fieldCopy = field.slice();
-        const farmCopy = farm.slice();
+        // padarome STATE HOOKO KOPIJA kad butu galima keisti busena
+        const fieldFirstCopy = fieldFirst.slice();
+        const fieldSecondCopy = fieldSecond.slice();
 
-        if (change === "field") {
-            fieldCopy.push({animal: what});
-            setField(farmCopy);
+        // jeigu onChange metu state bus first reikia prideti gyvuna i first optiona
+        if (change === "first") {
+            fieldFirstCopy.push({ animal: what });
+            // atiduodam kopija
+            setFieldFirst(fieldFirstCopy);
         }
-        else if (change === "farm") {
-            farmCopy.push({animal:what});
-            setFarm(farmCopy);
+        // jeigu onChange metu state bus second reikia prideti gyvuna i second optiona
+        else if (change === "second") {
+            fieldSecondCopy.push({ animal: what });
+            // atiduodam kopija
+            setFieldSecond(fieldSecondCopy);
         }
-
     };
-    const changeToWich = event => {
+    // select funkcija
+    const changeToWhich = event => {
         setChange(event.target.value);
     };
 
-  return (
-    <>
-    <div className="field">
-    <div>
-    
-        {field.map((fieldAnimal, i)=>(
-        <FieldAnimal key={i} field={fieldAnimal.field}/>
+    return (
+        <div className="field">
+            <div>
+                {/* sukuriamas komponentas GroupAnimal */}
+                {/* renderinamas pirmas laukas */}
+                {fieldFirst.map((fieldAnimal, i) => (
+                    <GroupAnimal key={i} fieldAnimal={fieldAnimal}></GroupAnimal>
                 ))}
-    </div>
-    <div>
-    {field.map((fieldAnimal, i)=>
-        {if(fieldAnimal.farm === 'right') 
-            return(<FieldAnimal key={i} field={fieldAnimal.field}/>);
-            return '';
-        }
-    )}
-    </div>
-
-        <button onClick={() => add ('cow')}>Add cow</button>
-        <button onClick={() => add ('sheep')}>Add sheep</button>
-        <button onClick={() => add ('horse')}>Add horse</button>
-        <select onChange={event => changeToWich(event)} value={field}>
-                <option value={"field"}>First field</option>
-                <option value={"farm"}>Second field</option>
-        </select>
-    </div>
-    </>
-  );
+            </div>
+            <div>
+                {/* sukuriamas komponentas GroupAnimal */}
+                {/* renderinamas antras laukas */}
+                {fieldSecond.map((fieldAnimal, i) => (
+                    <GroupAnimal key={i} fieldAnimal={fieldAnimal}></GroupAnimal>
+                ))}
+            </div>
+            {/* mygtuko paspaudimo metu pridedam tam tikra gyvuna */}
+            <button onClick={() => add("cow")}>Add cow</button>
+            <button onClick={() => add("sheep")}>Add sheep</button>
+            <button onClick={() => add("horse")}>Add horse</button>
+            {/* selecto keitimo metu islukstenama funkcija su eventu, priklausomai nuo pasirinkimo bus pateikta reiksme */}
+            <select onChange={event => changeToWhich(event)} value={fieldFirst}>
+                <option value={"first"}>First field</option>
+                <option value={"second"}>Second field</option>
+            </select>
+        </div>
+    );
 }
 
 export default App;
